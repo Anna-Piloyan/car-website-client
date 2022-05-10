@@ -1,0 +1,38 @@
+<div class="container-fluid">
+<div class="row top">
+  <div class="col-5">
+    <button type="button" routerLink="/auth/add" class="btn btn-secondary">Add new car</button>
+  </div>
+  <div class="col-6">
+    <div class="mb-3">
+      <input [(ngModel)]="searchStr" type="serach" class="form-control" id="search" placeholder="Search by model...">
+    </div>
+  </div>
+</div>
+<div>
+  <div class="row tb">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Picture</th>
+          <th>Price</th>
+          <th>Details</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of cars | search:searchStr">
+          <td>{{c.model}}</td>
+          <td><img width="100" src="http://localhost:8000/uploads/{{c.image}}" /></td>
+          <td>{{c.price}}</td>
+          <td class="center"><button (click)="detailsCar(c._id)" type="button" class="btn btn-primary">Details</button></td>
+          <td class="center"><button (click)="editCar(c._id)" type="button" class="btn btn-warning">Edit</button></td>
+          <td class="center"><button (click)="deleteCar(c._id)" type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

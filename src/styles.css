@@ -1,0 +1,18 @@
+
+html {
+  /* Растягиваем документ на всю высоту окна */
+  height: 100%;
+  width:auto;
+}
+
+body {
+  
+  margin: 0;
+  color: #fff;
+  background-image: url("./assets/images/bentley-wallpaper-1366x768-laptop-134117.jpg");
+  min-height: 90%;
+  background-repeat:no-repeat;
+  background-size:cover;
+  font-family: Garamond;
+  font-size: 24px;
+}

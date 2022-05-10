@@ -1,0 +1,18 @@
+.form-container
+{
+height:40%;
+width: 30%;
+margin:auto;
+display:flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(188, 158, 158, 0.3);
+padding:20px;
+margin-top: 200px;
+border-bottom-right-radius: 50px;
+border-top-left-radius: 50px;
+
+}
+h2{
+  text-align: center;
+}

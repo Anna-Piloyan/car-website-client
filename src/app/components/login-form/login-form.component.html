@@ -1,0 +1,40 @@
+
+
+<form [formGroup]="addUserForm" novalidate (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="email" id="email" placeholder="User Email" formControlName="email"
+      [ngClass]="{'is-valid':addUserForm.controls['email'].valid, 'is-invalid':addUserForm.controls['email'].invalid && (addUserForm.controls['email'].dirty || addUserForm.controls['email'].touched)}" />
+    <div class="invalid-feedback"
+      *ngIf="addUserForm.controls['email'].invalid && addUserForm.controls['email'].touched">
+      <div *ngIf="addUserForm.controls['email'].errors && addUserForm.controls['email'].errors['required']">
+        Email is not specified
+      </div>
+      <div *ngIf="addUserForm.controls['email'].errors && addUserForm.controls['email'].errors['email']">
+        Email is not correct</div>
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="pass" class="form-label">Password</label>
+    <input type="password" class="form-control" id="pass" name="pass" placeholder="Password" formControlName="pass"
+      [ngClass]="{'is-valid':addUserForm.controls['pass'].valid, 'is-invalid':addUserForm.controls['pass'].invalid && (addUserForm.controls['pass'].dirty || addUserForm.controls['pass'].touched)}" />
+
+    <div class="invalid-feedback" *ngIf="addUserForm.controls['pass'].invalid && addUserForm.controls['pass'].touched">
+      <div *ngIf="addUserForm.controls['pass'].errors && addUserForm.controls['pass'].errors['required']">
+        Password is not specified</div>
+      <div *ngIf="addUserForm.controls['pass'].errors && addUserForm.controls['pass'].errors['minlength']">
+        Password suposed to have not less then 4 symbols</div>
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="bb">
+    <button (click)="regBtn()" type="button" class="btn btn-success">Register</button>
+    <button (click)="submit()" type="submit" class="btn btn-primary" [disabled]="addUserForm.invalid">Sign In</button>
+
+  </div>
+</form>

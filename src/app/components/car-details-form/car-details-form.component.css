@@ -1,0 +1,10 @@
+.container-fluid {
+  padding: 40px;
+  background-image: url("../../../assets/images/road3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back {
+  margin-bottom: 40px;
+}

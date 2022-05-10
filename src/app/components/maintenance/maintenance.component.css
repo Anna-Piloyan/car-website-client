@@ -1,0 +1,30 @@
+.top {
+
+  margin-left: 80px;
+}
+
+.btn {
+  border: 2px solid black;
+}
+
+.tb {
+  margin: 50px 40px 0px 40px;
+
+}
+
+.table {
+  background-color: gray;
+  border: 2px solid black;
+
+}
+
+.center {
+  text-align: center;
+}
+
+.container-fluid {
+  padding: 30px;
+  background-image: url("../../../assets/images/bentley-wallpaper-1366x768-laptop-134117.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

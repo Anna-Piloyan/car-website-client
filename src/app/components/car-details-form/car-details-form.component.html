@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-7">
+      <h1>Bentley</h1>
+      <p class="card-text">{{car.model}}</p>
+      <img src="../../../assets/images/{{car.image}}" class="card-img-top" alt="auto">
+      <div class="card-body">
+        <h2 class="card-text">{{car.price | currency}} </h2>
+        <h1 class="card-title">{{car.description}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="float-end back"><button type="button" (click)="back()" class="btn btn-secondary">Go Back</button></div>
+      </div>
+    </div>
+  </div>
+</div>

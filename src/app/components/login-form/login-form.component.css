@@ -1,0 +1,14 @@
+.bb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+button {
+  margin-left: 20px;
+}
+
+button:hover {
+  opacity: 1.0;
+}

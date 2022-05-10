@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="add-car-form">
+        <h1>Add Car</h1>
+        <form [formGroup]="addCarForm"  novalidate (ngSubmit)="addCar()">
+          <div class="mb-3">
+            <label for="model" class="form-label">Model</label>
+            <input formControlName="model" type="text" class="form-control" id="model">
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input formControlName="price" type="number" class="form-control" id="price">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input formControlName="description" type="text" class="form-control" id="description">
+          </div>
+          <div class="form-group">
+            <label for="filedata">Image:</label>
+            <input type="file" class="form-control" name="image" (change)="onFileSelected($event)" #fileUpload>
+          </div><br />
+          <div>
+            <div class="float-start"><button type="submit" class="btn btn-secondary">Add Car</button>
+            </div>
+              <div class="float-end"><button type="button" (click)="back()" class="btn btn-success">Go Back</button>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

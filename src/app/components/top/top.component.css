@@ -1,0 +1,14 @@
+.container-fluid {
+  padding: 70px;
+  background-image: url("../../../assets/images/car3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.center {
+  margin: auto;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}

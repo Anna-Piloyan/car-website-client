@@ -1,0 +1,12 @@
+<div class="card">
+  <img src="../../../assets/images/{{car.image}}" class="card-img-top" alt="auto" height="200">
+  <div class="card-body">
+    <h5 class="card-title"><b>{{car.model}}</b></h5>
+    <h6 class="card-title">{{car.price | currency}}</h6>
+    <!--  -->
+    <p class="card-text">{{car.description}}</p>
+  </div>
+  <div class="card-footer">
+    <a [routerLink]="['/auth/details', car._id]">Details</a>
+  </div>
+</div>
